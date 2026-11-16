@@ -1,0 +1,111 @@
+{
+  "board": 1,
+  "title": "Garden year",
+  "today": "2026-04-02",
+  "strip": {
+    "name": "Ask the neighbours"
+  },
+  "style": {
+    "card_lines": 2,
+    "colours": {
+      "accent": "#4B5320",
+      "column": "#F6F7EF",
+      "strip": "#F4F6E8",
+      "label": "#4B5320",
+      "button": "#4B5320",
+      "ink": "#262B0E",
+      "muted": "#6B7055",
+      "line": "#DADFC4"
+    }
+  },
+  "columns": [
+    {
+      "name": "Plan"
+    },
+    {
+      "name": "This month",
+      "limit": 3
+    },
+    {
+      "name": "Growing"
+    },
+    {
+      "name": "Harvested"
+    }
+  ],
+  "cards": [
+    {
+      "id": "7",
+      "title": "Borrow the long ladder for the apple tree",
+      "column": "This month",
+      "kind": "Job",
+      "group": "Orchard",
+      "in_strip": true
+    },
+    {
+      "id": "1",
+      "title": "Order seed potatoes",
+      "column": "Plan",
+      "kind": "Buy",
+      "group": "Beds"
+    },
+    {
+      "id": "2",
+      "title": "Move the compost heap",
+      "column": "Plan",
+      "kind": "Job",
+      "group": "Yard"
+    },
+    {
+      "id": "3",
+      "title": "Sow tomatoes indoors",
+      "column": "This month",
+      "kind": "Sow",
+      "group": "Greenhouse",
+      "due": "2026-04-05"
+    },
+    {
+      "id": "4",
+      "title": "Prune the roses",
+      "column": "This month",
+      "kind": "Job",
+      "group": "Front",
+      "due": "2026-03-28"
+    },
+    {
+      "id": "5",
+      "title": "Broad beans",
+      "column": "Growing",
+      "kind": "Sow",
+      "group": "Beds"
+    },
+    {
+      "id": "6",
+      "title": "Garlic",
+      "column": "Growing",
+      "kind": "Sow",
+      "group": "Beds"
+    },
+    {
+      "id": "8",
+      "title": "Winter leeks",
+      "column": "Harvested",
+      "kind": "Sow",
+      "group": "Beds"
+    }
+  ],
+  "buttons": [
+    {
+      "name": "Done",
+      "columns": [
+        "This month"
+      ],
+      "main": true,
+      "action": "done"
+    },
+    {
+      "name": "Open",
+      "link": "https://example.com/garden/{id}"
+    }
+  ]
+}

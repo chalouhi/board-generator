@@ -1,0 +1,116 @@
+{
+  "board": 1,
+  "title": "Cookbook, second edition",
+  "summary": [
+    "12 chapters",
+    "3 with the editor",
+    "Printer booked for June"
+  ],
+  "columns": [
+    {
+      "name": "Proposed"
+    },
+    {
+      "name": "Outline"
+    },
+    {
+      "name": "Drafting"
+    },
+    {
+      "name": "Editing"
+    },
+    {
+      "name": "Photography"
+    },
+    {
+      "name": "Proofs"
+    },
+    {
+      "name": "Printing"
+    },
+    {
+      "name": "Published"
+    }
+  ],
+  "cards": [
+    {
+      "id": "CH-01",
+      "title": "Bread without a machine",
+      "column": "Published",
+      "kind": "Chapter"
+    },
+    {
+      "id": "CH-02",
+      "title": "Soups for a cold week, including the three that freeze well and the one that does not",
+      "column": "Proofs",
+      "kind": "Chapter",
+      "note": "Index still to do"
+    },
+    {
+      "id": "CH-03",
+      "title": "Rice, grains and pulses",
+      "column": "Photography",
+      "kind": "Chapter"
+    },
+    {
+      "id": "CH-04",
+      "title": "Fish in under twenty minutes",
+      "column": "Editing",
+      "kind": "Chapter"
+    },
+    {
+      "id": "CH-05",
+      "title": "Slow cooking",
+      "column": "Editing",
+      "kind": "Chapter"
+    },
+    {
+      "id": "CH-06",
+      "title": "Vegetables as the main dish, season by season, with a table of what to swap when something is not in the shops",
+      "column": "Editing",
+      "kind": "Chapter"
+    },
+    {
+      "id": "CH-07",
+      "title": "Eggs",
+      "column": "Drafting",
+      "kind": "Chapter"
+    },
+    {
+      "id": "CH-08",
+      "title": "Sauces and dressings",
+      "column": "Drafting",
+      "kind": "Chapter"
+    },
+    {
+      "id": "CH-09",
+      "title": "Baking for beginners",
+      "column": "Outline",
+      "kind": "Chapter"
+    },
+    {
+      "id": "CH-10",
+      "title": "Cooking for a crowd",
+      "column": "Outline",
+      "kind": "Chapter"
+    },
+    {
+      "id": "CH-11",
+      "title": "Preserves",
+      "column": "Proposed",
+      "kind": "Chapter"
+    },
+    {
+      "id": "CH-12",
+      "title": "Leftovers",
+      "column": "Proposed",
+      "kind": "Chapter"
+    },
+    {
+      "id": "FM-01",
+      "title": "Cover and title pages",
+      "column": "Photography",
+      "kind": "Front matter"
+    }
+  ]
+}

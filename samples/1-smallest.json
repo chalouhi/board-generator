@@ -1,0 +1,32 @@
+{
+  "board": 1,
+  "title": "House move",
+  "columns": [
+    {
+      "name": "To do"
+    },
+    {
+      "name": "Doing"
+    },
+    {
+      "name": "Done"
+    }
+  ],
+  "cards": [
+    {
+      "id": "1",
+      "title": "Book the van",
+      "column": "Doing"
+    },
+    {
+      "id": "2",
+      "title": "Pack the kitchen",
+      "column": "To do"
+    },
+    {
+      "id": "3",
+      "title": "Tell the bank",
+      "column": "Done"
+    }
+  ]
+}

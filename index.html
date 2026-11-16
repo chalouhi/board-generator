@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The page may load its own files and nothing else; it can send nothing anywhere (requirement 26). -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Board Generator</title>
+<link rel="icon" href="demo/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="demo/page.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <h1>Board Generator</h1>
+    <p class="sub">Give it one file of cards. It draws the board: columns of cards, with the ones waiting for a person in a strip on top. Click a card to open it. Your file never leaves this browser.</p>
+  </div>
+</header>
+<main>
+  <section class="wrap input" aria-label="Give a file">
+    <div id="drop" class="drop" tabindex="0">
+      <strong>Drop a file here</strong> or <label class="pick">choose one<input id="file" type="file" accept=".json,.xml,application/json,application/xml,text/xml,text/plain"></label>
+      <span class="hint">JSON or XML, as described in the <a id="guide" href="https://github.com/chalouhi/board-generator/blob/main/docs/file-format.md" target="_blank" rel="noopener noreferrer">file-format guide</a>.</span>
+    </div>
+    <details id="pastebox">
+      <summary>Or paste the file's text</summary>
+      <textarea id="paste" spellcheck="false" aria-label="The file's text" placeholder='{"board": 1, "title": "…", "columns": [ … ], "cards": [ … ]}'></textarea>
+      <button id="drawpaste" class="btn" type="button">Draw</button>
+    </details>
+    <div class="samples"><span>Try a sample:</span> <span id="samples"></span></div>
+    <div class="tools">
+      <button id="dl-svg" class="btn" type="button" disabled>Download picture</button>
+      <button id="dl-pdf" class="btn" type="button" disabled>Download PDF</button>
+      <span id="status" class="status" role="status"></span>
+    </div>
+  </section>
+  <div id="out" class="out"></div>
+</main>
+<footer class="wrap">
+  <p>Three ways to use it: this page; the command <code>board &lt;file&gt; --svg board.svg --pdf board.pdf</code>; or include <code>src/board.js</code> in your own page and call <code>BoardGenerator.draw(place, text)</code>. MIT licence. <a href="https://github.com/chalouhi/board-generator" target="_blank" rel="noopener noreferrer">Source and guides</a>.</p>
+</footer>
+<script src="src/board.js"></script>
+<script src="src/fontsubset.js"></script>
+<script src="src/picture.js"></script>
+<script src="vendor/pdf-lib.min.js"></script>
+<script src="vendor/fontkit.umd.min.js"></script>
+<script src="src/pdf.js"></script>
+<script src="demo/samples.js"></script>
+<script src="demo/fonts.js"></script>
+<script src="demo/app.js"></script>
+</body>
+</html>

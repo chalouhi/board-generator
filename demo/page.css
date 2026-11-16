@@ -1,0 +1,32 @@
+/* The demo page around the board. The board brings its own styles. */
+:root { --ink: #16232A; --muted: #5F7078; --line: #D3E0E3; --tint: #F0F6F7; --teal: #075056; --accent: #FF5B04; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: #fff; color: var(--ink); font: 15px/1.45 Calibri, Carlito, "Segoe UI", Arial, sans-serif; }
+.wrap { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+.top { border-bottom: 1px solid var(--line); padding: 18px 0 14px; }
+.top h1 { margin: 0; font-size: 24px; display: flex; align-items: center; gap: 10px; }
+.top h1::before { content: ""; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); }
+.sub { margin: 6px 0 0; color: var(--muted); max-width: 760px; }
+.input { padding-top: 16px; display: flex; flex-direction: column; gap: 12px; }
+.drop { border: 2px dashed var(--line); border-radius: 12px; padding: 16px; display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: baseline; }
+.drop.over, .drop:focus-visible { border-color: var(--teal); background: var(--tint); outline: none; }
+.pick { color: var(--teal); font-weight: 700; cursor: pointer; text-decoration: underline; }
+.pick input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.hint { color: var(--muted); flex-basis: 100%; }
+a { color: var(--teal); }
+details summary { cursor: pointer; color: var(--teal); font-weight: 700; min-height: 44px; display: flex; align-items: center; }
+textarea { width: 100%; min-height: 160px; font: 13px/1.4 ui-monospace, Menlo, Consolas, monospace; border: 1px solid var(--line); border-radius: 8px; padding: 10px; color: var(--ink); }
+.samples { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.samples > span:first-child { color: var(--muted); }
+#samples { display: contents; }
+.btn { min-height: 44px; padding: 0 16px; border-radius: 22px; border: 1px solid var(--line); background: #fff; color: var(--ink); font: inherit; font-weight: 700; cursor: pointer; }
+.btn:hover:not(:disabled) { background: var(--tint); }
+.btn:disabled { color: #8A979D; cursor: not-allowed; background: #F5F7F8; }
+.btn:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+.tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding-bottom: 8px; }
+.status { color: var(--muted); font-size: 13px; }
+.out { max-width: 1280px; margin: 0 auto; }
+footer { border-top: 1px solid var(--line); margin-top: 24px; color: var(--muted); font-size: 13px; }
+code { font: 12.5px ui-monospace, Menlo, Consolas, monospace; background: var(--tint); padding: 1px 4px; border-radius: 4px; overflow-wrap: anywhere; }
+@media (max-width: 767px) { .wrap { padding: 0 16px; } }

@@ -1,0 +1,10 @@
+The board name ("title") is missing.
+Column 2 ("Doing"): "limit" is 0; it must be a whole number, 1 or more.
+Column 3: the name "To do" is used twice.
+Card 1 (id "1"): the due date is "14 March"; a date is written YYYY-MM-DD.
+Card 2 (id "2"): the column "Review" is not defined. Defined: To do, Doing.
+Card 3 (id "2"): the id "2" is used twice.
+Card 3 (id "2"): it is marked for the top strip, but the file has no top strip.
+Button 1 ("Finish"): it has neither a link nor an action.
+Style: the colour "accent" is "orange"; a colour is written as six-digit hex, like #075056.
+Style: "muted" (#DDDDDD) cannot be read on the column tint (#F0F6F7): contrast 1.2 to 1; at least 4.5 is needed.

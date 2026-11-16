@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<board version="1" title="House move">
+  <column name="To do"/>
+  <column name="Doing"/>
+  <column name="Done"/>
+  <card id="1" title="Book the van" column="Doing"/>
+  <card id="2" title="Pack the kitchen" column="To do"/>
+  <card id="3" title="Tell the bank" column="Done"/>
+</board>

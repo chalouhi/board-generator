@@ -1,0 +1,45 @@
+{
+  "board": 1,
+  "columns": [
+    {
+      "name": "To do"
+    },
+    {
+      "name": "Doing",
+      "limit": 0
+    },
+    {
+      "name": "To do"
+    }
+  ],
+  "cards": [
+    {
+      "id": "1",
+      "title": "Book the van",
+      "column": "Doing",
+      "due": "14 March"
+    },
+    {
+      "id": "2",
+      "title": "Pack the kitchen",
+      "column": "Review"
+    },
+    {
+      "id": "2",
+      "title": "Tell the bank",
+      "column": "Doing",
+      "in_strip": true
+    }
+  ],
+  "buttons": [
+    {
+      "name": "Finish"
+    }
+  ],
+  "style": {
+    "colours": {
+      "accent": "orange",
+      "muted": "#DDDDDD"
+    }
+  }
+}

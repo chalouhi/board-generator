@@ -1,0 +1,70 @@
+--- page 1
+Shop relaunch
+1 overdue · 3 due within 7 days · 2 in Needs you
+Card
+Title
+Group
+Due and note
+Needs you
+ · 2
+Decision · #41
+Which courier for next-day orders?
+Launch day
+due 12 Mar · Holding up
+work
+Fix · #38
+Photos for the new range are too dark
+Website
+Sent back twice
+Ideas
+ · 2
+Feature · #52
+Gift wrapping at checkout
+Website
+Feature · #53
+Loyalty stamps for returning customers
+Launch day
+due 20 Apr
+Ready
+ · 3 / 4
+Task · #47
+Stock count before opening
+Stockroom
+due 14 Mar
+Feature · #48
+Size guide on every product page
+Website
+Task · #49
+Shelf labels with the new prices
+Stockroom
+due 6 Mar
+Doing
+ · 3 / 2
+Feature · #44
+New checkout page with one-step payment
+Website
+due 16 Mar
+Fix · #45
+Basket total wrong when a voucher is used twice
+Website
+Task · #46
+Window display for launch week
+Launch day
+Checking
+ · 1
+Fix · #43
+Opening hours on the home page
+Website
+Done
+ · 48 · 3 listed
+Task · #40
+Returns policy rewritten in plain words
+Website
+Fix · #39
+Card reader replaced at the till
+Stockroom
+Decision · #37
+Launch date agreed
+Launch day
+10 Mar 2026
+Page 1 of 1

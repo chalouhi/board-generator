@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- A host page with a strict policy: its own scripts only, no inline styles. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'none'">
+<title>A page that includes the board</title>
+<link rel="stylesheet" href="embed.css">
+</head>
+<body>
+<p id="before">Text of the host page, before the board.</p>
+<div id="place"></div>
+<p id="after">Text of the host page, after the board.</p>
+<script src="../../src/board.js"></script>
+<script src="../../demo/samples.js"></script>
+<script src="embed.js"></script>
+</body>
+</html>

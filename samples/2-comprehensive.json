@@ -1,0 +1,211 @@
+{
+  "board": 1,
+  "title": "Shop relaunch",
+  "today": "2026-03-10",
+  "link_pattern": "https://example.com/cards/{id}",
+  "strip": {
+    "name": "Needs you"
+  },
+  "columns": [
+    {
+      "name": "Ideas"
+    },
+    {
+      "name": "Ready",
+      "limit": 4
+    },
+    {
+      "name": "Doing",
+      "limit": 2
+    },
+    {
+      "name": "Checking"
+    },
+    {
+      "name": "Done",
+      "show": 3,
+      "total": 48,
+      "more_link": "https://example.com/done"
+    }
+  ],
+  "cards": [
+    {
+      "id": "41",
+      "title": "Which courier for next-day orders?",
+      "column": "Ideas",
+      "kind": "Decision",
+      "group": "Launch day",
+      "due": "2026-03-12",
+      "note": "Holding up work",
+      "in_strip": true,
+      "text": "Two quotes are in. Northline is cheaper; Swift collects on Saturdays.",
+      "buttons": [
+        {
+          "name": "Northline",
+          "action": "answer-northline",
+          "link": "https://example.com/cards/41?answer=northline",
+          "main": true
+        },
+        {
+          "name": "Swift",
+          "action": "answer-swift",
+          "link": "https://example.com/cards/41?answer=swift"
+        }
+      ]
+    },
+    {
+      "id": "38",
+      "title": "Photos for the new range are too dark",
+      "column": "Checking",
+      "kind": "Fix",
+      "group": "Website",
+      "note": "Sent back twice",
+      "in_strip": true
+    },
+    {
+      "id": "52",
+      "title": "Gift wrapping at checkout",
+      "column": "Ideas",
+      "kind": "Feature",
+      "group": "Website"
+    },
+    {
+      "id": "53",
+      "title": "Loyalty stamps for returning customers",
+      "column": "Ideas",
+      "kind": "Feature",
+      "group": "Launch day",
+      "due": "2026-04-20"
+    },
+    {
+      "id": "47",
+      "title": "Stock count before opening",
+      "column": "Ready",
+      "kind": "Task",
+      "group": "Stockroom",
+      "due": "2026-03-14"
+    },
+    {
+      "id": "48",
+      "title": "Size guide on every product page",
+      "column": "Ready",
+      "kind": "Feature",
+      "group": "Website"
+    },
+    {
+      "id": "49",
+      "title": "Shelf labels with the new prices",
+      "column": "Ready",
+      "kind": "Task",
+      "group": "Stockroom",
+      "due": "2026-03-06"
+    },
+    {
+      "id": "44",
+      "title": "New checkout page with one-step payment",
+      "column": "Doing",
+      "kind": "Feature",
+      "group": "Website",
+      "due": "2026-03-16",
+      "text": "One page for address, delivery and payment. Guest checkout stays."
+    },
+    {
+      "id": "45",
+      "title": "Basket total wrong when a voucher is used twice",
+      "column": "Doing",
+      "kind": "Fix",
+      "group": "Website"
+    },
+    {
+      "id": "46",
+      "title": "Window display for launch week",
+      "column": "Doing",
+      "kind": "Task",
+      "group": "Launch day"
+    },
+    {
+      "id": "43",
+      "title": "Opening hours on the home page",
+      "column": "Checking",
+      "kind": "Fix",
+      "group": "Website"
+    },
+    {
+      "id": "40",
+      "title": "Returns policy rewritten in plain words",
+      "column": "Done",
+      "kind": "Task",
+      "group": "Website"
+    },
+    {
+      "id": "39",
+      "title": "Card reader replaced at the till",
+      "column": "Done",
+      "kind": "Fix",
+      "group": "Stockroom"
+    },
+    {
+      "id": "37",
+      "title": "Launch date agreed",
+      "column": "Done",
+      "kind": "Decision",
+      "group": "Launch day"
+    }
+  ],
+  "buttons": [
+    {
+      "name": "Start",
+      "kinds": [
+        "Feature",
+        "Fix",
+        "Task"
+      ],
+      "columns": [
+        "Ready"
+      ],
+      "main": true,
+      "action": "start",
+      "link": "https://example.com/cards/{id}/start"
+    },
+    {
+      "name": "Send to checking",
+      "columns": [
+        "Doing"
+      ],
+      "main": true,
+      "action": "check",
+      "link": "https://example.com/cards/{id}/check"
+    },
+    {
+      "name": "Accept",
+      "columns": [
+        "Checking"
+      ],
+      "main": true,
+      "action": "accept",
+      "link": "https://example.com/cards/{id}/accept"
+    },
+    {
+      "name": "Send back",
+      "columns": [
+        "Checking"
+      ],
+      "action": "send-back",
+      "link": "https://example.com/cards/{id}/send-back"
+    },
+    {
+      "name": "Discuss",
+      "link": "https://example.com/cards/{id}/discuss"
+    },
+    {
+      "name": "Add note",
+      "action": "note"
+    },
+    {
+      "name": "Archive",
+      "confirm": "Archive this card?",
+      "action": "archive",
+      "link": "https://example.com/cards/{id}/archive"
+    }
+  ]
+}
