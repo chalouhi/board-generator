@@ -1,0 +1,8 @@
+The card's title ("title") is missing.
+The id is "44", but the card that was opened is "43".
+Section 1 ("Requirements"): the type "checks" is not known. Known: text, list, checklist, timeline.
+Section 2: the title is missing.
+Section 2, item 1: "done" is "yes"; it must be true or false.
+Section 3 ("Notes"), item 1: the date ("when") is missing.
+Button 1 ("Send back"): it asks for text but has no action.
+Button 2 ("Archive"): it has both a question to confirm and a text to ask for; only one is allowed.

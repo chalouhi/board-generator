@@ -12,15 +12,16 @@ Give it one file of cards. It draws the board: the cards sorted into columns, wi
    node bin/board.js samples/2-comprehensive.json --svg board.svg --pdf board.pdf
    ```
    With a wrong file it writes nothing, prints every problem, and ends with exit code 1.
-3. **The script for other pages** — include `src/board.js` and draw a board into any element, at its width; ask to be told when a card's button is pressed:
+3. **The script for other pages** — include `src/board.js` and draw a board into any element, at its width; be told when a card's button is pressed, and, if you like, hand over each opened card in full and a fresh board for a Refresh button:
    ```js
-   BoardGenerator.draw(place, fileText, { onAction: (action, id) => { /* … */ } });
+   BoardGenerator.draw(place, fileText, { onAction: (action, id, text) => { /* … */ }, getCard: id => cardText, refresh: () => fileText });
    ```
 
 ## Learn more
 
 - **[Using Board Generator](docs/guide.md)** — every way to use it in full, what each output holds, how the board behaves, its limits.
-- **[The board file](docs/file-format.md)** — how to write the file, in JSON or XML, with every field and every check.
+- **[The board file](docs/file-format.md)** — how to write the file, in JSON or XML, with every field and every check; and the card file, for one opened card in full.
+- **[Release notes](docs/release-notes.md)** — what each release added.
 
 ## What is in this repository
 
@@ -30,7 +31,7 @@ Give it one file of cards. It draws the board: the cards sorted into columns, wi
 | `bin/` | The command. |
 | `index.html`, `demo/` | The demo page. |
 | `docs/` | The user guide and the file guide. |
-| `samples/`, `expected/` | The five sample files and the outputs they must produce. |
+| `samples/`, `expected/` | The five sample files, two card files (`cards/`), and the outputs they must produce. |
 | `reference/` | The pictures of the samples approved when the look was designed. |
 | `vendor/`, `fonts/` | Third-party code and fonts with their licences, so nothing needs a network. |
 | `tests/` | `node --test tests/*.test.js` — runs with no network. |

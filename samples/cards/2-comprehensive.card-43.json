@@ -1,0 +1,119 @@
+{
+  "card": 1,
+  "id": "43",
+  "kind": "Fix",
+  "title": "Opening hours on the home page",
+  "column": "Checking",
+  "group": "Website",
+  "due": "2026-03-14",
+  "text": "The home page still shows winter hours. Show this week's hours from the shop calendar, and say \"Closed today\" on a closed day.",
+  "facts": [
+    {
+      "label": "Held by",
+      "value": "Sam"
+    },
+    {
+      "label": "Version",
+      "value": "v14"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Requirements",
+      "type": "checklist",
+      "items": [
+        {
+          "text": "The home page shows today's opening and closing time.",
+          "done": true
+        },
+        {
+          "text": "On a closed day it reads \"Closed today\" and shows the next opening time.",
+          "done": true
+        },
+        {
+          "text": "The hours change at midnight without anyone editing the page.",
+          "done": false
+        }
+      ]
+    },
+    {
+      "title": "Notes",
+      "type": "timeline",
+      "items": [
+        {
+          "when": "2026-03-09",
+          "who": "Sam",
+          "text": "Checked on a phone: the closing time wraps onto two lines."
+        },
+        {
+          "when": "2026-03-08",
+          "who": "Dana",
+          "text": "Bank holidays come from the same calendar, so they are covered."
+        }
+      ]
+    },
+    {
+      "title": "History",
+      "type": "timeline",
+      "collapsed": true,
+      "items": [
+        {
+          "when": "2026-03-09",
+          "who": "Sam",
+          "text": "Moved to Checking"
+        },
+        {
+          "when": "2026-03-07",
+          "who": "Dana",
+          "text": "Sent to checking"
+        },
+        {
+          "when": "2026-03-05",
+          "who": "Dana",
+          "text": "Started"
+        },
+        {
+          "when": "2026-03-04",
+          "who": "Sam",
+          "text": "Moved to Ready"
+        },
+        {
+          "when": "2026-03-03",
+          "who": "Sam",
+          "text": "Due date set to 14 Mar"
+        },
+        {
+          "when": "2026-03-02",
+          "who": "Sam",
+          "text": "Created"
+        }
+      ]
+    }
+  ],
+  "buttons": [
+    {
+      "name": "Accept",
+      "main": true,
+      "action": "accept"
+    },
+    {
+      "name": "Send back",
+      "action": "send-back",
+      "ask": {
+        "label": "Why is it going back?",
+        "required": true
+      }
+    },
+    {
+      "name": "Discuss",
+      "link": "https://example.com/cards/43/discuss"
+    },
+    {
+      "name": "Add note",
+      "action": "note",
+      "ask": {
+        "label": "Note"
+      }
+    }
+  ]
+}

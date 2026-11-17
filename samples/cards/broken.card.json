@@ -1,0 +1,47 @@
+{
+  "card": 1,
+  "id": "44",
+  "sections": [
+    {
+      "title": "Requirements",
+      "type": "checks",
+      "items": []
+    },
+    {
+      "type": "checklist",
+      "items": [
+        {
+          "text": "The page shows today's hours.",
+          "done": "yes"
+        }
+      ]
+    },
+    {
+      "title": "Notes",
+      "type": "timeline",
+      "items": [
+        {
+          "who": "Sam",
+          "text": "Checked on a phone."
+        }
+      ]
+    }
+  ],
+  "buttons": [
+    {
+      "name": "Send back",
+      "ask": {
+        "label": "Why is it going back?"
+      },
+      "link": "https://example.com/cards/43/back"
+    },
+    {
+      "name": "Archive",
+      "action": "archive",
+      "ask": {
+        "label": "Why?"
+      },
+      "confirm": "Archive this card?"
+    }
+  ]
+}

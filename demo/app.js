@@ -16,7 +16,13 @@
 
   function show(text, from) {
     const t0 = performance.now();
-    const r = BoardGenerator.draw(out, text);
+    // A sample shown here may come with card files kept with the page: its
+    // cards open in full. Every other card opens with what the file holds.
+    const sample = (window.BOARD_SAMPLES || []).find(x => x.text.trim() === String(text).trim());
+    const cards = sample ? (window.BOARD_CARDS || []).filter(c => c.board === sample.file) : [];
+    const options = {};
+    if (cards.length) options.getCard = id => { const c = cards.find(x => x.id === id); return c ? c.text : null; };
+    const r = BoardGenerator.draw(out, text, options);
     current = r.ok ? r.board : null;
     dlSvg.disabled = dlPdf.disabled = !r.ok;
     status.textContent = r.ok ? `Drawn from ${from} in ${Math.round(performance.now() - t0)} ms.` : '';

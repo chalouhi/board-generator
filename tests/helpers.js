@@ -41,4 +41,25 @@ function toXML(file) {
   return s + '</board>\n';
 }
 
-module.exports = { B, ROOT, TODAY, GOOD, read, sample, boardOf, FONTS, toXML };
+// A card file written as XML (card-file guide, "The same card as XML").
+function toCardXML(card) {
+  const q = v => String(v).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+  const val = v => (v === true ? 'yes' : v === false ? 'no' : v);
+  const attrs = (o, keys) => keys.filter(k => o[k] !== undefined).map(k => ` ${k.replace(/_/g, '-')}="${q(val(o[k]))}"`).join('');
+  let s = `<?xml version="1.0" encoding="UTF-8"?>\n<card version="${card.card}"${attrs(card, ['id', 'title', 'kind', 'column', 'group', 'due', 'note', 'link'])}>\n`;
+  if (card.text) s += q(card.text) + '\n';
+  for (const f of card.facts || []) s += `  <fact${attrs(f, ['label', 'value', 'link'])}/>\n`;
+  for (const sec of card.sections || []) {
+    s += `  <section${attrs(sec, ['title', 'type', 'numbered', 'collapsed'])}>`;
+    if (sec.type === 'text') s += (sec.text ? q(sec.text) : '') + '</section>\n';
+    else s += '\n' + (sec.items || []).map(it => `    <item${attrs(it, ['when', 'who', 'done', 'link'])}>${q(it.text)}</item>\n`).join('') + '  </section>\n';
+  }
+  for (const b of card.buttons || []) {
+    const open = `  <button${attrs(b, ['name', 'link', 'action', 'main', 'confirm'])}`;
+    s += b.ask ? `${open}><ask${attrs(b.ask, ['label', 'required', 'long'])}/></button>\n` : open + '/>\n';
+  }
+  return s + '</card>\n';
+}
+const cardSample = name => read('samples', 'cards', name);
+
+module.exports = { B, ROOT, TODAY, GOOD, read, sample, boardOf, FONTS, toXML, toCardXML, cardSample };

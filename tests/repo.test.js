@@ -30,7 +30,7 @@ test('the board script adds nothing outside its place and uses no inline style a
 test('the demo page data is up to date with samples/ and fonts/, and offers the five samples (requirement 29)', () => {
   assert.equal(read('demo', 'samples.js'), samplesJS());
   assert.equal(read('demo', 'fonts.js'), fontsJS());
-  assert.deepEqual(SAMPLES.map(s => s[0]), fs.readdirSync(path.join(ROOT, 'samples')).sort());
+  assert.deepEqual(SAMPLES.map(s => s[0]), fs.readdirSync(path.join(ROOT, 'samples')).filter(f => f.endsWith('.json')).sort()); // 1.1: card files sit in samples/cards/
   assert.match(read('index.html'), /href="https:\/\/github\.com\/[^/]+\/board-generator\/blob\/main\/docs\/file-format\.md"/);
 });
 
@@ -38,9 +38,9 @@ test('the repository holds what requirement 37 lists, under the MIT licence', ()
   assert.match(read('LICENSE'), /^MIT License/);
   for (const f of ['README.md', 'docs/guide.md', 'docs/file-format.md', 'src/board.js', 'src/picture.js', 'src/pdf.js', 'bin/board.js', 'index.html', 'vendor/README.md', 'fonts/OFL.txt'])
     assert.ok(fs.existsSync(path.join(ROOT, f)), f);
-  assert.deepEqual(fs.readdirSync(path.join(ROOT, 'samples')).sort(), ['1-smallest.json', '2-comprehensive.json', '3-many-columns.json', '4-custom-colours.json', '5-broken.json']);
+  assert.deepEqual(fs.readdirSync(path.join(ROOT, 'samples')).sort(), ['1-smallest.json', '2-comprehensive.json', '3-many-columns.json', '4-custom-colours.json', '5-broken.json', 'cards']); // 1.1 adds cards/ (requirement 58)
   const expected = fs.readdirSync(path.join(ROOT, 'expected')).sort();
-  assert.equal(expected.length, 13);
+  assert.equal(expected.length, 14); // 1.1 adds cards/ (requirement 60)
   assert.ok(expected.includes('5-broken.problems.txt'));
   const guide = read('docs', 'file-format.md');
   for (let i = 1; i <= 10; i++) assert.match(guide, new RegExp(`^## ${i} · `, 'm'));

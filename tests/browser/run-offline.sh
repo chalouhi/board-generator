@@ -9,4 +9,4 @@ MODS=$1; SHOTS=${2:-}
 exec docker run --rm --network none --ipc=host \
   -v "$REPO":/repo:ro -v "$MODS":/pw/node_modules:ro ${SHOTS:+-v "$SHOTS":/shots} \
   -e NODE_PATH=/pw/node_modules ${SHOTS:+-e SHOTS=/shots} -w /repo \
-  mcr.microsoft.com/playwright:v1.49.1-noble sh -c 'node --test tests/browser/page.test.js'
+  mcr.microsoft.com/playwright:v1.49.1-noble sh -c 'node --test tests/browser/page.test.js tests/browser/card.test.js'
